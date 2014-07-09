@@ -12,8 +12,9 @@ Git
 *- Wikipedia*
 
 # New Projects
-+ You'll need to initialize a new local repository in your project's root directory using `git init`
-+ Now you can begin tracking your changes!
-+ *But first,* you need to create a `.gitignore` file. In a Rails app this should be available by default.
-+ Your .gitignore file should include `.DS_Store` if you're using a mac
-+ Next you'll move all your changes into a temporary staging area by running `git add -A`
+1. You'll need to initialize a new local repository in your project's root directory using `git init`
+2. Now you can begin tracking your changes!
+3. *But first,* you need to create a `.gitignore` file. In a Rails app this should be available by default.
+4. Your `.gitignore` file should include `.DS_Store` if you're using a mac
+5. Then, move all your changes into a temporary staging area by running `git add -A`
+6. Finally, you can make those changes permanent by running `git commit -m"Initial commit"`
