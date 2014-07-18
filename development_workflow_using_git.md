@@ -35,14 +35,36 @@ Pavlok uses Github to host and share code. If you're dropping into one of our co
 9. Push your branch to GitHub `git push origin BRANCH NAME`
 10. Make a pull request
 
-Congratulations! That is going to be the workflow you use on any new project you join at Pavlok! If you're currently working on a project, you can simply start that workflow at step 4. 
+Congratulations! That is going to be the workflow you use on any new project you join at Pavlok! If you're currently working on a project, you can simply start that workflow at step 4.
 
 # Branches
 The default branch in a project is known as a master branch. This is the branch that we will push to production and is therefore sacred.
 
-## Ten commandments of the master branch
+A GitHub repo is a tree, where the tip of each branch is the snapshot of the most recent commit.
+
+Use tig `brew install tig` to view repo trees and examine diffs.
+
+Let’s run through an example:
+
+## Branching off of Pavlokcom
+1. Firstly, decide which branch you want to break off of. Are you starting a new feature? If so, start from master:
+2. Clone master using git clone git@github.com:maneeshsethi/Pavlokcom.git .
+3. Or, do you want the latest code for an in-progress feature? You’ll still want to clone master. But then you have…
+4. …Pull the branch you are looking for: git pull origin branch_im_looking_for
+5. Then, break off a new branch with git checkout -b branch_name_explaining_what_youre_doing
+6. Make changes to that document and COMMIT EARLY AND OFTEN. This means git add ./files/with/changes and git commit -m”detailed message about changes made”
+7. A good github repository allows us to track feature creation all the way through the product lifecycle. We’ll never lose code this way.
+8. When the feature you’re building is completed, and hopefully well-tested, you can git push origin branch_name_explaining_what_youre_doing
+9. If you look at the branch in GitHub, you there will be an option to create a pull request. Doing so will update the collaborators and someone can code review your branch and choose to merge with master. This ensures at least two people look at all the code. This is extremely important to maintaining good code quality and is an essential habit to propagate.
+
+
+## Ten git commandments
 1. Thou shalt not pollute the master branch with buggy code.
 2. Thou shalt refactor thy code before pushing to master.
-3.
+3. Thou shalt commit early and commit often.
+4. Thou shalt submit pull requests.
+5. Thou shalt share thy codebase.
+6. Thou shalt not push directly to master.
+7. Thou shalt name your branches in lowercase snake string
 
 # Existing projects
